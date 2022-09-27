@@ -1,8 +1,7 @@
 import React, { FC } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { Colors } from '../../utils'
-import { NavbarContainer } from './NavbarStyles'
-
+import { NavbarContainer } from './NavbarStyles';
 
 const Navbar:FC = () => {
 

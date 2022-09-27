@@ -1,8 +1,18 @@
 import React from 'react'
+import Navbar from '../../Components/Navbar/Navbar'
+import Photo from '../../Components/Photo/Photo'
+import { PhotoContainer } from '../../Components/Photo/PhotoStyles'
+import { HomeContentContainer } from './HomeStyles'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <HomeContentContainer>
+      <Navbar/>
+      Home
+      <PhotoContainer>
+        <Photo/>
+      </PhotoContainer>
+    </HomeContentContainer>
   )
 }
 

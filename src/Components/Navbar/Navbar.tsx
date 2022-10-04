@@ -13,7 +13,7 @@ const Navbar:FC = () => {
 
   return (
     <NavbarContainer>
-        <h2 onClick={handleClick}>Arnaud <span className='secondaryColor'>Dalcq</span></h2>
+        <h2 onClick={handleClick}>D<span className='secondaryColor'>a</span>lcq</h2>
         <div className='NavbarLinksContent'>
             <NavLink to='/Home' style={({ isActive }) => ({ color: isActive? Colors.secondary : '#ffffff' })}>
               Home</NavLink>

@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import {Colors, Fonts} from "./utils";
 
 
@@ -35,6 +35,10 @@ const GlobalStyle = createGlobalStyle`
 
   .secondaryColor{
     color: ${Colors.secondary};
+  }
+
+  .bolded{
+    font-weight: bold;
   }
 
   li{

@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import {Colors, Fonts} from "./utils";
+import { createGlobalStyle, keyframes } from "styled-components";
+// import {Colors, Fonts} from "./utils";
 
 
 /*
@@ -11,6 +11,56 @@ import {Colors, Fonts} from "./utils";
   Titles : font-family: 'Montserrat', sans-serif;
   Texts : font-family: 'Raleway', sans-serif;
 */
+
+export const Colors = {
+  main : '#2d274e',
+  secondary : '#e40244'
+};
+
+export const Fonts = {
+  mainText : "'Raleway', sans-serif",
+  titles : "'Montserrat', sans-serif"
+};
+
+export const Animations = {
+  slideToLeft : keyframes`
+  0% {
+      transform: translateX(20%);
+  }
+  100% {
+      transform: translateX(0%);
+  };
+  `,
+
+  slideToRight : keyframes`
+    0% {
+        transform: translateX(-20%);
+    }
+    100% {
+        transform: translateX(0%);
+    };
+  `,
+
+  fadeIn : keyframes`
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  };
+  `,
+  
+  fadeOut : keyframes`
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    };
+  `
+}
+
+
 
 const GlobalStyle = createGlobalStyle`
   *{

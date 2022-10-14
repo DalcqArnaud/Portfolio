@@ -1,9 +1,13 @@
-import React, { FC } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
-import { Colors } from '../../utils'
-import { NavbarContainer } from './NavbarStyles';
+import React, { FC, useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { NavbarContentContainer, NavbarWrapper } from './NavbarStyles';
 
-const Navbar:FC = () => {
+interface navBarProps{
+  changeCurrentPage?:((currentPageIndex:number) => void | undefined)
+  getCurrentPage?:number
+}
+
+const Navbar:FC<navBarProps> = (props) => {
 
   let navigate = useNavigate();
 
@@ -11,20 +15,40 @@ const Navbar:FC = () => {
     navigate('/');
   }
 
+  const homeClick = () => {
+    props.changeCurrentPage?.(0);
+  }
+
+  const aboutClick = () => {
+    props.changeCurrentPage?.(1);
+  }
+
+  const portfolioClick = () => {
+    props.changeCurrentPage?.(2);
+  }
+
+  const contactClick = () => {
+    props.changeCurrentPage?.(3);
+  }
+
   return (
-    <NavbarContainer>
-        <h2 onClick={handleClick}>D<span className='secondaryColor'>a</span>lcq</h2>
-        <div className='NavbarLinksContent'>
-            <NavLink to='/Home' style={({ isActive }) => ({ color: isActive? Colors.secondary : '#ffffff' })}>
-              Home</NavLink>
-            <NavLink to='/About' style={({ isActive }) => ({ color: isActive? Colors.secondary : '#ffffff' })}>
-              About</NavLink>
-            <NavLink to='/Portfolio' style={({ isActive }) => ({ color: isActive? Colors.secondary : '#ffffff' })}>
-              Portfolio</NavLink>
-            <NavLink to='/Contact' style={({ isActive }) => ({ color: isActive? Colors.secondary : '#ffffff' })}>
-              Contact</NavLink>
+    <NavbarWrapper>
+      <h2 onClick={handleClick}>D<span className='secondaryColor'>a</span>lcq</h2>
+      <NavbarContentContainer>
+        <div className={`NavbarItem ${props.getCurrentPage === 0 ? 'active' : null}`} onClick={homeClick}>
+          Home
         </div>
-    </NavbarContainer>
+        <div className={`NavbarItem ${props.getCurrentPage === 1 ? 'active' : null}`} onClick={aboutClick}>
+          About
+        </div>
+        <div className={`NavbarItem ${props.getCurrentPage === 2 ? 'active' : null}`} onClick={portfolioClick}>
+          Portfolio
+        </div>
+        <div className={`NavbarItem ${props.getCurrentPage === 3 ? 'active' : null}`} onClick={contactClick}>
+          Contact
+        </div>
+      </NavbarContentContainer>
+    </NavbarWrapper>
   )
 }
 

@@ -59,12 +59,29 @@ export const MoreArrow = styled.p`
     font-size: x-large;
     letter-spacing: 0.2em;
     cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+    transform-origin: 0% 50%;
+
+    :hover{
+        transform: scale(1.1);
+    }
 `;
 
 export const DiamondContainer = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+
+    transition: all 0.2s ease-in-out;
+
+    :hover{
+        transform: scale(1.1);
+    }
+
+    :hover > div:nth-child(2){
+        border: 2px solid white;
+    }
 `;
 
 export const DiamondBackground = styled.div`

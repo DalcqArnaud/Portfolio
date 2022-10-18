@@ -25,37 +25,37 @@ export const Fonts = {
 export const Animations = {
   slideToLeft : keyframes`
   0% {
-      transform: translateX(20%);
+    transform: translateX(20%);
   }
   100% {
-      transform: translateX(0%);
+    transform: translateX(0%);
   };
   `,
 
   slideToRight : keyframes`
     0% {
-        transform: translateX(-20%);
+      transform: translateX(-20%);
     }
     100% {
-        transform: translateX(0%);
+      transform: translateX(0%);
     };
   `,
 
   fadeIn : keyframes`
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
+    opacity: 1;
   };
   `,
   
   fadeOut : keyframes`
     0% {
-        opacity: 1;
+      opacity: 1;
     }
     100% {
-        opacity: 0;
+      opacity: 0;
     };
   `
 }

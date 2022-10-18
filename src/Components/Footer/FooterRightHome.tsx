@@ -4,7 +4,7 @@ import { FooterWrapper } from './FooterStyles'
 const FooterRightHome = () => {
   return (
     <FooterWrapper justifyType={'end'}>
-        test
+        
     </FooterWrapper>
   )
 }

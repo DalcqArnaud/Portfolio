@@ -27,10 +27,6 @@ const Navbar:FC<navBarProps> = (props) => {
     props.changeCurrentPage?.(2);
   }
 
-  const contactClick = () => {
-    props.changeCurrentPage?.(3);
-  }
-
   return (
     <NavbarWrapper>
       <h2 onClick={handleClick}>D<span className='secondaryColor'>a</span>lcq</h2>
@@ -43,9 +39,6 @@ const Navbar:FC<navBarProps> = (props) => {
         </div>
         <div className={`NavbarItem ${props.getCurrentPage === 2 ? 'active' : null}`} onClick={portfolioClick}>
           Portfolio
-        </div>
-        <div className={`NavbarItem ${props.getCurrentPage === 3 ? 'active' : null}`} onClick={contactClick}>
-          Contact
         </div>
       </NavbarContentContainer>
     </NavbarWrapper>

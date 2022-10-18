@@ -20,7 +20,7 @@ export const NavbarWrapper = styled.div`
 export const NavbarContentContainer = styled.div`
     grid-column: 3/3;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
     align-items: center;
     justify-items: center;
     column-gap: 55px;

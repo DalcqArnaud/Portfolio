@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { NavbarContentContainer, NavbarWrapper } from './NavbarStyles';
+import { NavbarContentContainer, NavbarLine, NavbarWrapper } from './NavbarStyles';
 
 interface navBarProps{
   changeCurrentPage?:((currentPageIndex:number) => void | undefined)
@@ -41,6 +41,7 @@ const Navbar:FC<navBarProps> = (props) => {
           Portfolio
         </div>
       </NavbarContentContainer>
+      <NavbarLine></NavbarLine>
     </NavbarWrapper>
   )
 }

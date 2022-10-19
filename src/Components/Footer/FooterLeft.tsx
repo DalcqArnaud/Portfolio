@@ -1,9 +1,8 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { FooterLeftContent, FooterWrapper } from './FooterStyles'
 import { FaArtstation, FaLinkedinIn } from 'react-icons/fa'
 import { BsGithub } from 'react-icons/bs'
 import { IconContext } from 'react-icons/lib'
-import { Link } from 'react-router-dom'
 
 const FooterLeft = () => {
   return (

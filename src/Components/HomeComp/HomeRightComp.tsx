@@ -19,18 +19,18 @@ const HomeRightComp = () => {
       </DiamondContainer>
 
       <DiamondContainer className='diamondSkillStyled'>
-        <DiamondIconContainer>
+        <DiamondIconContainer id='styledComponent'>
           <IconContext.Provider value={{ className: "iconSkillStyled" }}>
             <SiStyledcomponents/>
           </IconContext.Provider>
-          <p>Styled- <br/> comp.</p>
+          <p id='styled'>Styled-comp.</p>
         </DiamondIconContainer>
         <DiamondBackground/>
       </DiamondContainer>
 
       <DiamondContainer className='diamondSkillTypescript'>
         <DiamondIconContainer>
-          <IconContext.Provider value={{ className: "iconSkill" }}>
+          <IconContext.Provider value={{ className: "iconSkillTypescript" }}>
             <SiTypescript/>
           </IconContext.Provider>
           <p>Typescript</p>

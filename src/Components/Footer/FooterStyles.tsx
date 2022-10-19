@@ -9,7 +9,7 @@ export const FooterWrapper = styled.div<footerWrapperProps>`
     width: 100%;
     height: 100%;
     display: grid;
-    align-items: center;
+    align-items: end;
     justify-items: ${props => props.justifyType};
     font-family: ${Fonts.titles};
     font-weight: lighter;
@@ -28,7 +28,7 @@ export const FooterLeftContent = styled.div`
         grid-template-columns: auto auto;
         justify-items: center;
         align-items: center;
-        font-size: x-large;
+        font-size: 200%;;
 
         :hover{
             color: ${Colors.secondary};
@@ -37,7 +37,7 @@ export const FooterLeftContent = styled.div`
 
     [class^='iconSocial']{
         margin-right: 8px;
-        font-size: xx-large;
+        font-size: xxx-large;
     }
 
     a{

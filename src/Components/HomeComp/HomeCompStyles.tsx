@@ -35,12 +35,12 @@ export const RightWrapper = styled.div`
 
 export const NameContentContainer = styled.div`
     display: grid;
-    align-items: center;
+    align-items: baseline;
 `;
 
 export const DescriptionContentContainer = styled.div`
     display: grid;
-    align-items: center;
+    align-items: baseline;
 `;
 
 export const Name = styled.h1`
@@ -50,13 +50,15 @@ export const Name = styled.h1`
 `;
 
 export const Description = styled.p`
-    font-size: x-large;
+    font-size: 200%;
+    line-height: 45px;
     font-weight: lighter;
 `;
 
 export const MoreArrow = styled.p`
     font-family: ${Fonts.titles};
-    font-size: x-large;
+    font-size: 300%;
+    line-height: 45px;
     letter-spacing: 0.2em;
     cursor: pointer;
 
@@ -72,6 +74,7 @@ export const DiamondContainer = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+    margin-left: 50px;
 
     transition: all 0.2s ease-in-out;
 
@@ -82,13 +85,17 @@ export const DiamondContainer = styled.div`
     :hover > div:nth-child(2){
         border: 2px solid white;
     }
+
+    #styledComponent{
+        margin-top: -25px;
+    }
 `;
 
 export const DiamondBackground = styled.div`
     grid-row: 1/1;
     grid-column: 1/1;
-    width: 125px;
-    height: 125px;
+    width: 160px;
+    height: 160px;
     background-color: ${Colors.secondary};
     transform: rotate(45deg);
 `;
@@ -104,6 +111,14 @@ export const DiamondIconContainer = styled.div`
     text-align: center;
 
     [class^=iconSkill]{
-        font-size: xxx-large;
+        font-size: 500%;
+    }
+
+    .iconSkillStyled{
+        font-size: 800%;
+    }
+
+    #styled{
+        margin-top: -50px;
     }
 `;

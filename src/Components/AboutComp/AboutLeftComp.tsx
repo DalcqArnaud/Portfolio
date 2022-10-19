@@ -11,7 +11,7 @@ const AboutLeftComp = () => {
 
       <DiamondContainer className='diamondHobbyStreaming'>
         <DiamondIconContainer>
-          <IconContext.Provider value={{ className: "iconSkillReact" }}>
+          <IconContext.Provider value={{ className: "iconHobbyStreaming" }}>
             <GiVideoConference/>
           </IconContext.Provider>
           <p>Streaming</p>
@@ -21,7 +21,7 @@ const AboutLeftComp = () => {
 
       <DiamondContainer className='diamondHobbyGaming'>
         <DiamondIconContainer>
-          <IconContext.Provider value={{ className: "iconSkillStyled" }}>
+          <IconContext.Provider value={{ className: "iconHobbyGaming" }}>
             <IoGameController/>
           </IconContext.Provider>
           <p>Gaming</p>
@@ -31,7 +31,7 @@ const AboutLeftComp = () => {
 
       <DiamondContainer className='diamondHobbyDrawing'>
         <DiamondIconContainer>
-          <IconContext.Provider value={{ className: "iconSkill" }}>
+          <IconContext.Provider value={{ className: "iconHobbyDrawing" }}>
             <BsFillPencilFill/>
           </IconContext.Provider>
           <p>Drawing</p>

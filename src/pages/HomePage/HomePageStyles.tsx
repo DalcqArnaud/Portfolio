@@ -6,7 +6,7 @@ export const MainHomeContainer = styled.div`
     display: grid;
     grid-template-columns:  35% 30% 35%;
     grid-template-rows: 10% 80% 10%;
-    padding: 6% 0 6% 0;
+    padding: 120px;
 `;
 
 export const NavBarContainer = styled.div`
@@ -24,17 +24,16 @@ export const MiddleContainer = styled.div`
     grid-row: 2/4;
 `;
 
-export const RightContainer = styled.div`
+interface RightContainerProps{
+    endRow?:number
+}
+
+export const RightContainer = styled.div<RightContainerProps>`
     grid-column: 3/3;
-    grid-row: 2/2;
+    grid-row: 2/${props => props.endRow};
 `;
 
 export const LeftFooterContainer = styled.div`
     grid-column: 1/2;
-    grid-row: 3/3;
-`;
-
-export const RightFooterContainer = styled.div`
-    grid-column: 3/4;
     grid-row: 3/3;
 `;

@@ -18,7 +18,7 @@ const HomeLeftComp:FC<homeLeftCompProps> = (props) => {
       </NameContentContainer>
       <DescriptionContentContainer>
         <Description>Belgian front-end developer. Currently finishing my training <span className='bolded'>@Becode</span> to become web developer.</Description>
-        <MoreArrow onClick={MoreArrowHandleClick}> Know more <span className='secondaryColor'>→</span></MoreArrow>
+        <MoreArrow onClick={MoreArrowHandleClick}>Know more <span className='secondaryColor'>→</span></MoreArrow>
       </DescriptionContentContainer>
     </LeftWrapper>
   )

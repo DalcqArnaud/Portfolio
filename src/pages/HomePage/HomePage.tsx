@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import AboutLeftComp from '../../Components/AboutComp/AboutLeftComp'
 import AboutRightComp from '../../Components/AboutComp/AboutRightComp'
 import FooterLeft from '../../Components/Footer/FooterLeft'
+import FooterRightPortfolio from '../../Components/Footer/FooterRightPortfolio'
 import HomeLeftComp from '../../Components/HomeComp/HomeLeftComp'
 import HomeRightComp from '../../Components/HomeComp/HomeRightComp'
 import Navbar from '../../Components/Navbar/Navbar'
@@ -9,7 +10,7 @@ import Photo from '../../Components/Photo/Photo'
 import { PhotoContainer } from '../../Components/Photo/PhotoStyles'
 import PortfolioLeftComp from '../../Components/PortfolioComp.tsx/PortfolioLeftComp'
 import PortfolioRightComp from '../../Components/PortfolioComp.tsx/PortfolioRightComp'
-import { LeftContainer, LeftFooterContainer, MainHomeContainer, MiddleContainer, NavBarContainer, RightContainer } from './HomePageStyles'
+import { LeftContainer, LeftFooterContainer, MainHomeContainer, MiddleContainer, NavBarContainer, RightContainer, RightFooterContainer } from './HomePageStyles'
 
 const HomePage = () => {
 
@@ -52,6 +53,11 @@ const HomePage = () => {
       <LeftFooterContainer>
         <FooterLeft/>
       </LeftFooterContainer>
+      {currentPage === 2 ? 
+        <RightFooterContainer>
+          <FooterRightPortfolio/>
+        </RightFooterContainer> : null
+      }
     </MainHomeContainer>
   )
 }

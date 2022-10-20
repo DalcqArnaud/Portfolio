@@ -1,19 +1,9 @@
 import { createGlobalStyle, keyframes } from "styled-components";
-// import {Colors, Fonts} from "./utils";
-
-
-/*
-  Colors:
-  Purple : #2d274e
-  Magenta : #e40244
-
-  Fonts :
-  Titles : font-family: 'Montserrat', sans-serif;
-  Texts : font-family: 'Raleway', sans-serif;
-*/
 
 export const Colors = {
   main : '#2d274e',
+  mainDarker : '#262142',
+  mainDarkest : '#1d1a33',
   secondary : '#e40244'
 };
 

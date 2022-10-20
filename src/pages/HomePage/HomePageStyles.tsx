@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Animations } from "../../globalStyles";
 
 export const MainHomeContainer = styled.div`
     width: 100%;
@@ -36,4 +37,10 @@ export const RightContainer = styled.div<RightContainerProps>`
 export const LeftFooterContainer = styled.div`
     grid-column: 1/2;
     grid-row: 3/3;
+`;
+
+export const RightFooterContainer = styled.div`
+    grid-column: 3/3;
+    grid-row: 3/3;
+    animation: 0.5s ease-in-out ${Animations.slideToLeft}, 0.5s ease-in-out ${Animations.fadeIn};
 `;

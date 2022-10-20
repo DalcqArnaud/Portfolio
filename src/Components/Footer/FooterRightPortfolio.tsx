@@ -1,22 +1,29 @@
 import React from 'react'
-import { BsFillDiamondFill } from 'react-icons/bs'
+import { GiVideoConference } from 'react-icons/gi'
 import { IconContext } from 'react-icons/lib'
-import { FooterWrapper, MainArrowsContainer } from './FooterStyles'
+import { DiamondBackground, DiamondContainer, DiamondIconContainer, FooterWrapper, MainArrowsContainer } from './FooterStyles'
 
 const FooterRightPortfolio = () => {
   return (
     <FooterWrapper justifyType='end'>
       <MainArrowsContainer>
-        <div>
-          <IconContext.Provider value={{ className: "iconDiamondArrowDown" }}>
-            <BsFillDiamondFill/>
-          </IconContext.Provider>
-        </div>
-        <div>
-          <IconContext.Provider value={{ className: "iconDiamondArrowUp" }}>
-            <BsFillDiamondFill/>
-          </IconContext.Provider>
-        </div>
+        <div></div>
+        <DiamondContainer>
+          <DiamondIconContainer>
+            <IconContext.Provider value={{ className: "iconDiamondArrowDown" }}>
+              <GiVideoConference/>
+            </IconContext.Provider>
+          </DiamondIconContainer>
+          <DiamondBackground/>
+        </DiamondContainer>
+        <DiamondContainer>
+          <DiamondIconContainer>
+            <IconContext.Provider value={{ className: "iconDiamondArrowUp" }}>
+              <GiVideoConference/>
+            </IconContext.Provider>
+          </DiamondIconContainer>
+          <DiamondBackground/>
+        </DiamondContainer>
       </MainArrowsContainer>
     </FooterWrapper>
   )

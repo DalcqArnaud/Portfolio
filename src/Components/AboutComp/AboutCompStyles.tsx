@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Animations, Colors, Fonts } from "../../globalStyles";
+import { Animations, Colors } from "../../globalStyles";
 
 export const LeftWrapper = styled.div`
     width: 100%;

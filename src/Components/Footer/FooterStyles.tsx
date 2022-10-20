@@ -51,24 +51,51 @@ export const MainArrowsContainer = styled.div`
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 15% 15%;
-    align-items: end;
-    justify-items: end;
+    align-items: center;
+    justify-items: center;
+`;
 
-    div:first-child{
-        grid-column: 2/2;
+export const DiamondContainer = styled.div`
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    transition: all 0.2s ease-in-out;
+
+    :hover{
+        transform: scale(1.1);
     }
-    div:last-child{
-        grid-column: 3/3;
+
+    :hover > div:first-child{
+        color: ${Colors.secondary};
     }
+
+    :hover > div:last-child{
+        background-color: white;
+        border: 2px solid ${Colors.secondary};
+    }
+`;
+
+export const DiamondIconContainer = styled.div`
+    grid-row: 1/1;
+    grid-column: 1/1;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    z-index: 2;
+    text-align: center;
 
     [class^=iconDiamond]{
-        font-size: 300%;
-        color: ${Colors.secondary};
-        cursor: pointer;
-
-        :hover{
-            color: white;
-            transform: scale(1.1);
-        }
+        font-size: 250%;
     }
+`;
+
+export const DiamondBackground = styled.div`
+    grid-row: 1/1;
+    grid-column: 1/1;
+    width: 50px;
+    height: 50px;
+    background-color: ${Colors.secondary};
+    transform: rotate(45deg);
 `;

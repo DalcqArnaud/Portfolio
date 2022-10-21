@@ -6,7 +6,9 @@ import FooterRightPortfolio from '../../Components/Footer/FooterRightPortfolio'
 import HomeLeftComp from '../../Components/HomeComp/HomeLeftComp'
 import HomeRightComp from '../../Components/HomeComp/HomeRightComp'
 import Navbar from '../../Components/Navbar/Navbar'
-import Photo from '../../Components/Photo/Photo'
+import PhotoAbout from '../../Components/Photo/PhotoAbout'
+import PhotoHome from '../../Components/Photo/PhotoHome'
+import PhotoPortfolio from '../../Components/Photo/PhotoPortfolio'
 import { PhotoContainer } from '../../Components/Photo/PhotoStyles'
 import PortfolioLeftComp from '../../Components/PortfolioComp.tsx/PortfolioLeftComp'
 import PortfolioRightComp from '../../Components/PortfolioComp.tsx/PortfolioRightComp'
@@ -20,6 +22,12 @@ const HomePage = () => {
     setCurrentPage(currentPageIndex);
   }
 
+  const [currentCard, setCurrentCard] = useState<number>(0);
+
+  const cardHandler = (currentCardIndex:number):void | undefined => {
+    setCurrentCard(currentCardIndex);
+  }
+
   return (
     <MainHomeContainer>
       <NavBarContainer>
@@ -28,11 +36,13 @@ const HomePage = () => {
       <LeftContainer>
         {currentPage === 0 ? <HomeLeftComp changeCurrentPage={pageHandler}/> : null}
         {currentPage === 1 ? <AboutLeftComp/> : null}
-        {currentPage === 2 ? <PortfolioLeftComp/> : null}
+        {currentPage === 2 ? <PortfolioLeftComp getCurrentCard={currentCard}/> : null}
       </LeftContainer>
       <MiddleContainer>
         <PhotoContainer>
-          <Photo/>
+        {currentPage === 0 ? <PhotoHome/> : null}
+        {currentPage === 1 ? <PhotoAbout/> : null}
+        {currentPage === 2 ? <PhotoPortfolio/> : null}
         </PhotoContainer>
       </MiddleContainer>
       {currentPage === 0 ? 
@@ -47,7 +57,7 @@ const HomePage = () => {
       }
       {currentPage === 2 ? 
         <RightContainer endRow={3}>
-          <PortfolioRightComp/>
+          <PortfolioRightComp getCurrentCard={currentCard}/>
         </RightContainer> : null
       }
       <LeftFooterContainer>
@@ -55,7 +65,7 @@ const HomePage = () => {
       </LeftFooterContainer>
       {currentPage === 2 ? 
         <RightFooterContainer>
-          <FooterRightPortfolio/>
+          <FooterRightPortfolio changeCurrentCard={cardHandler} getCurrentCard={currentCard}/>
         </RightFooterContainer> : null
       }
     </MainHomeContainer>

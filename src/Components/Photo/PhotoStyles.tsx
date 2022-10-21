@@ -10,8 +10,9 @@ export const PhotoContainer = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+    margin-top: 120px;
 
     .photoImg{
-        width: 100%;
+        height: 100%;
     }
 `;

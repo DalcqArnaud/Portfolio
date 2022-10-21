@@ -2,9 +2,11 @@ import { createGlobalStyle, keyframes } from "styled-components";
 
 export const Colors = {
   main : '#2d274e',
-  mainDarker : '#262142',
-  mainDarkest : '#1d1a33',
-  secondary : '#e40244'
+  mainDarker : 'rgba(38,33,66,0.8)',
+  mainDarkest : 'rgba(29,26,51,0.8)',
+  secondary : '#e40244',
+  disabled: '#a6a6a6',
+  transparent: 'rgba(255,255,255,0.2)'
 };
 
 export const Fonts = {
@@ -61,15 +63,19 @@ const GlobalStyle = createGlobalStyle`
   
   body{
     width: 100vw;
-    height: 100vh;
     background-color: ${Colors.main};
     color: white;
     font-family: ${Fonts.mainText};
+
+    @media screen and (min-width: 1200px){
+      height: 100vh;
+    }
   }
 
   #root{
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
 
   .secondaryColor{

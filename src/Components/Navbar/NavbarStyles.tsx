@@ -17,6 +17,10 @@ export const NavbarWrapper = styled.div`
         cursor: pointer;
         font-size: xxx-large;
     }
+
+    @media screen and (max-width: 380px){
+        font-size: 150%;
+    }
 `;
 
 export const NavbarContentContainer = styled.div`
@@ -37,6 +41,10 @@ export const NavbarContentContainer = styled.div`
 
     .active{
         color: ${Colors.secondary};
+    }
+
+    @media screen and (max-width: 380px){
+        grid-column: 1/1;
     }
 `;
 

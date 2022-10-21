@@ -1,72 +1,17 @@
-import React from 'react'
-import { FaNodeJs, FaReact } from 'react-icons/fa';
-import { SiStyledcomponents } from 'react-icons/si';
-import { Card, CardButton, CardDescriptionContainer, CardInfosContainer, CardNameContainer, CardPictureContainer, CardTechnosIconsContainer, LeftWrapper, MoreArrow, MoreArrowContainer } from './PortfolioCompStyles'
+import React, { FC } from 'react'
+import LeftCard from './LeftCard';
+import LeftCard2 from './LeftCard2';
+import { LeftWrapper } from './PortfolioCompStyles'
 
-const PortfolioLeftComp = () => {
+interface portfolioLeftCompProps{
+  getCurrentCard?:number
+}
 
-  const HandleClick = (url:string) => {
-    window.open(url, '_blank');
-  }
-
+const PortfolioLeftComp:FC<portfolioLeftCompProps> = (props) => {
   return (
     <LeftWrapper>
-      <Card alignType='baseline'>
-        <CardNameContainer>
-          Amstramgram
-        </CardNameContainer>
-        <CardDescriptionContainer>
-          <p>
-            A social network project based on Instagram. You can Create an account and add pictures.
-          </p>
-        </CardDescriptionContainer>
-        <CardInfosContainer>
-          <CardButton onClick={() => {HandleClick('https://dalcqarnaud.github.io/Amstramgram/')}}>
-            Check it now !
-          </CardButton>
-          <CardTechnosIconsContainer>
-            <FaReact title='React'/>
-            <FaNodeJs title='NodeJS'/>
-            <SiStyledcomponents title='Styled-components'/>
-          </CardTechnosIconsContainer>
-          <MoreArrowContainer>
-          <MoreArrow onClick={() => {HandleClick('https://github.com/DalcqArnaud/Amstramgram')}}>
-            More infos <span className='secondaryColor'>→</span>
-          </MoreArrow>  
-        </MoreArrowContainer>
-        </CardInfosContainer>
-        <CardPictureContainer>
-          <img src={require('../../images/Amstramgram.png')} alt='Amstramgram project'  className='cardPicture'/>
-        </CardPictureContainer>
-      </Card>
-      <Card alignType='end'>
-      <CardNameContainer>
-          Amstramgram
-        </CardNameContainer>
-        <CardDescriptionContainer>
-          <p>
-            A social network project based on Instagram. You can Create an account and add pictures.
-          </p>
-        </CardDescriptionContainer>
-        <CardInfosContainer>
-          <CardButton onClick={() => {HandleClick('https://dalcqarnaud.github.io/Amstramgram/')}}>
-            Check it now !
-          </CardButton>
-          <CardTechnosIconsContainer>
-            <FaReact title='React'/>
-            <FaNodeJs title='NodeJS'/>
-            <SiStyledcomponents title='Styled-components'/>
-          </CardTechnosIconsContainer>
-          <MoreArrowContainer>
-          <MoreArrow onClick={() => {HandleClick('https://github.com/DalcqArnaud/Amstramgram')}}>
-            More infos <span className='secondaryColor'>→</span>
-          </MoreArrow>  
-        </MoreArrowContainer>
-        </CardInfosContainer>
-        <CardPictureContainer>
-          <img src={require('../../images/Amstramgram.png')} alt='Amstramgram project'  className='cardPicture'/>
-        </CardPictureContainer>
-      </Card>
+      {props.getCurrentCard === 0 ? <LeftCard/> : null}
+      {props.getCurrentCard === 1 ? <LeftCard2/> : null}
     </LeftWrapper>
   )
 }

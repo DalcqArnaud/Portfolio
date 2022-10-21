@@ -12,14 +12,19 @@ export const FooterWrapper = styled.div<footerWrapperProps>`
     display: grid;
     align-items: end;
     justify-items: ${props => props.justifyType};
+    
+    @media screen and (max-width: 380px){
+        align-items: center;
+        justify-items: center;
+    }
 `;
 
 export const FooterLeftContent = styled.div`
     display: grid;
     grid-template-columns: repeat(3, auto);
     align-items: center;
-    justify-items: center;
-    column-gap: 55px;
+    width: 100%;
+    justify-content: space-between;
     font-family: ${Fonts.titles};
     font-weight: lighter;
 
@@ -34,15 +39,27 @@ export const FooterLeftContent = styled.div`
         :hover{
             color: ${Colors.secondary};
         }
+
+        @media screen and (max-width: 380px){
+            font-size: 80%;
+        }
     }
 
     [class^='iconSocial']{
-        margin-right: 8px;
+        margin-right: 5px;
         font-size: xx-large;
+
+        @media screen and (max-width: 380px){
+            font-size: 150%;
+        }
     }
 
     a{
         text-decoration: none;
+    }
+
+    @media screen and (max-width: 380px){
+        column-gap: 20px;
     }
 `;
 
@@ -53,12 +70,27 @@ export const MainArrowsContainer = styled.div`
     grid-template-columns: 1fr 15% 15%;
     align-items: center;
     justify-items: center;
+
+    .cardDisabled{
+        pointer-events: none;
+        cursor: default;
+
+        div:first-child{
+            color: ${Colors.disabled};
+        }
+
+        div:last-child{
+            background-color: ${Colors.transparent};
+            border: 2px solid ${Colors.disabled};
+        }
+    }
 `;
 
 export const DiamondContainer = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+    cursor: pointer;
 
     transition: all 0.2s ease-in-out;
 

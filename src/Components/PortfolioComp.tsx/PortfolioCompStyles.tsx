@@ -4,15 +4,29 @@ import { Animations, Colors, Fonts } from "../../globalStyles";
 export const LeftWrapper = styled.div`
     width: 100%;
     height: 100%;
+`;
+
+export const RightWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+`;
+
+interface CardProps{
+    alignType?:string
+}
+
+export const LeftCardWrapper = styled.div`
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     animation: 0.5s ease-in-out ${Animations.slideToRight}, 0.5s ease-in-out ${Animations.fadeIn};
 `;
 
-export const RightWrapper = styled.div`
+export const RightCardWrapper = styled.div`
     width: 100%;
-    height: 100%;
+    height: 100%;   
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -20,11 +34,7 @@ export const RightWrapper = styled.div`
     animation: 0.5s ease-in-out ${Animations.slideToLeft}, 0.5s ease-in-out ${Animations.fadeIn};
 `;
 
-interface CardProps{
-    alignType?:string
-}
-
-export const Card = styled.div<CardProps>`
+export const CardContainer = styled.div<CardProps>`
     display: grid;
     grid-template-columns: 33.3% 16.6% 16.6% 1fr;
     grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
@@ -122,6 +132,7 @@ export const CardPictureContainer = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
+    overflow: hidden;
 
     background-color: ${Colors.mainDarkest};
 

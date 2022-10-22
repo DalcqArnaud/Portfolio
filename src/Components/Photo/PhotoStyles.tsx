@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Animations } from "../../globalStyles";
 
 export const PhotoContainer = styled.div`
     width: 100%;
@@ -14,5 +15,6 @@ export const PhotoContainer = styled.div`
 
     .photoImg{
         height: 100%;
+        animation: 0.5s ease-in-out ${Animations.slideToUp}, 0.5s ease-in-out ${Animations.fadeIn};
     }
 `;

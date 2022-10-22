@@ -33,6 +33,15 @@ export const Animations = {
     };
   `,
 
+  slideToUp : keyframes`
+  0% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  };
+  `,
+
   fadeIn : keyframes`
   0% {
     opacity: 0;

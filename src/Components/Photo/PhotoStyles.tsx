@@ -11,10 +11,11 @@ export const PhotoContainer = styled.div`
     display: grid;
     align-items: center;
     justify-items: center;
-    margin-top: 120px;
+    /* margin-top: 120px; */
 
     .photoImg{
-        height: 100%;
+        max-width: 100%;
+        height: auto;
         animation: 0.5s ease-in-out ${Animations.slideToUp}, 0.5s ease-in-out ${Animations.fadeIn};
     }
 `;

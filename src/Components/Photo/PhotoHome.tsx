@@ -2,7 +2,7 @@ import React from 'react'
 
 const PhotoHome = () => {
   return (
-    <img src={require('../../images/PhotoV2.png')} alt='' className='photoImg'/>
+    <img src={require('../../images/Photo_Home.png')} alt='' className='photoImg'/>
   )
 }
 

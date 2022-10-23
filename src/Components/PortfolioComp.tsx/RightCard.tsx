@@ -42,11 +42,13 @@ const RightCard = () => {
           </MoreArrowContainer>
         </CardInfosContainer>
         <CardPictureContainer>
-          <img
-            src={require("../../images/Hangman.png")}
-            alt="Hangman Game project"
-            className="cardPicture"
-          />
+          <div className="cardPictureContainer">
+            <img
+              src={require("../../images/Hangman.png")}
+              alt="Hangman Game project"
+              className="cardPicture"
+            />
+          </div>
         </CardPictureContainer>
       </CardContainer>
       <CardContainer alignType="end">

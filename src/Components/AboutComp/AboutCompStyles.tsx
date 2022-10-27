@@ -12,16 +12,36 @@ export const LeftWrapper = styled.div`
     .diamondHobbyStreaming{
         grid-column: 1/1;
         grid-row: 1/1;
+
+        @media screen and (max-width: 380px){
+            grid-column: 1/1;
+            grid-row: 1/1;
+        }
     }
 
     .diamondHobbyGaming{
         grid-column: 2/2;
         grid-row: 2/2;
+
+        @media screen and (max-width: 380px){
+            grid-column: 2/2;
+            grid-row: 1/1;
+        }
     }
 
     .diamondHobbyDrawing{
         grid-column: 1/1;
         grid-row: 3/3;
+
+        @media screen and (max-width: 380px){
+            grid-column: 3/3;
+            grid-row: 1/1;
+        }
+    }
+
+    @media screen and (max-width: 380px){
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
     }
 `;
 
@@ -31,6 +51,12 @@ export const RightWrapper = styled.div`
     display: grid;
     grid-template-rows: auto 1fr auto;
     animation: 0.5s ease-in-out ${Animations.slideToLeft}, 0.5s ease-in-out ${Animations.fadeIn};
+    
+    @media screen and (max-width: 380px){
+        grid-template-rows: repeat(3, auto);
+        align-items: space-around;
+        row-gap: 20px;
+    }
 `;
 
 export const DiamondContainer = styled.div`
@@ -48,6 +74,10 @@ export const DiamondContainer = styled.div`
     :hover > div:nth-child(2){
         border: 2px solid white;
     }
+
+    @media screen and (max-width: 380px){
+        margin:20px 0px 20px 0px;
+    }
 `;
 
 export const DiamondBackground = styled.div`
@@ -57,6 +87,11 @@ export const DiamondBackground = styled.div`
     height: 160px;
     background-color: ${Colors.secondary};
     transform: rotate(45deg);
+
+    @media screen and (max-width: 380px){
+        width: 70px;
+        height: 70px;
+    }
 `;
 
 export const DiamondIconContainer = styled.div`
@@ -71,10 +106,24 @@ export const DiamondIconContainer = styled.div`
 
     [class^=iconHobby]{
         font-size: 500%;
+
+        @media screen and (max-width: 380px){
+            font-size: 180%;
+        }
     }
 
     .iconHobbyDrawing{
         font-size: 450%;
+        @media screen and (max-width: 380px){
+            font-size: 140%;
+        }
+    }
+
+    p{
+        font-size: 100%;
+        @media screen and (max-width: 380px){
+            font-size: 50%;
+        }
     }
 `;
 
@@ -88,6 +137,11 @@ export const Description = styled.p`
     a{
         color: ${Colors.secondary};
         font-weight: bold;
+    }
+
+    @media screen and (max-width: 380px){
+        font-size: 120%;
+        line-height: 25px;
     }
 
 `;

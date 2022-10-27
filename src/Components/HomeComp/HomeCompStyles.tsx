@@ -93,7 +93,6 @@ export const Description = styled.p`
     @media screen and (max-width: 380px){
         font-size: 120%;
         line-height: 25px;
-        font-weight: lighter;
         margin-top: 20px;
     }
 `;

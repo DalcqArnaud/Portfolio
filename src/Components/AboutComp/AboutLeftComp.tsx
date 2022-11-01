@@ -34,7 +34,7 @@ const AboutLeftComp = () => {
           <IconContext.Provider value={{ className: "iconHobbyDrawing" }}>
             <BsFillPencilFill/>
           </IconContext.Provider>
-          <p>Drawing</p>
+          <p id='drawing'>Drawing</p>
         </DiamondIconContainer>
         <DiamondBackground/>
       </DiamondContainer>

@@ -22,6 +22,11 @@ export const LeftCardWrapper = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     animation: 0.5s ease-in-out ${Animations.slideToRight}, 0.5s ease-in-out ${Animations.fadeIn};
+    padding-top: 20px;
+    
+    @media screen and (max-width: 1000px){
+        justify-items: center;
+    }
 `;
 
 export const RightCardWrapper = styled.div`
@@ -32,6 +37,11 @@ export const RightCardWrapper = styled.div`
     grid-template-rows: 1fr 1fr;
     justify-items: end;
     animation: 0.5s ease-in-out ${Animations.slideToLeft}, 0.5s ease-in-out ${Animations.fadeIn};
+    padding-top: 20px;
+    
+    @media screen and (max-width: 1000px){
+        justify-items: center;
+    }
 `;
 
 export const CardContainer = styled.div<CardProps>`
@@ -50,6 +60,11 @@ export const CardContainer = styled.div<CardProps>`
     :hover{
         transform: scale(1.1);
     }
+
+    @media screen and (max-width: 1000px){
+        grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr;
+        width: 100%;
+    }
 `;
 
 export const CardNameContainer = styled.div`
@@ -58,6 +73,12 @@ export const CardNameContainer = styled.div`
     font-size: x-large;
     font-weight: bold;
     text-align: center;
+    @media screen and (max-width: 1400px){
+        font-size: medium;
+    }
+    @media screen and (min-width: 750px) and (max-width: 1000px){
+        font-size: xxx-large;
+    }
 `;
 
 export const CardDescriptionContainer = styled.div`
@@ -65,6 +86,12 @@ export const CardDescriptionContainer = styled.div`
     grid-row: 2/2;
     text-align: justify;
     border-bottom: 2px solid white;
+    @media screen and (max-width: 1400px){
+        font-size: xx-small;
+    }
+    @media screen and (min-width: 750px) and (max-width: 1000px){
+        font-size: x-large;
+    }
 `;
 
 export const CardInfosContainer = styled.div`
@@ -74,6 +101,17 @@ export const CardInfosContainer = styled.div`
     grid-template-rows: repeat(3, auto);
     text-align: center;
     align-items: end;
+
+    @media screen and (max-width: 1000px){
+        grid-column: 1/5;
+        grid-row: 3/4;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, auto);
+        text-align: center;
+        align-items: end;
+        row-gap: 10px;
+    }
 `;
 
 export const CardButton = styled.button`
@@ -92,6 +130,28 @@ export const CardButton = styled.button`
         border: 2px solid ${Colors.secondary};
         transform: scale(1.1);
     }
+
+    @media screen and (max-width: 1400px){
+        height: 25px;
+        font-size: 70%;
+    }
+
+    @media screen and (max-width: 1000px){
+        width: 40%;
+        font-size: 150%;
+        grid-column: 1/3;
+        grid-row: 2/2;
+    }
+
+    @media screen and (max-width: 750px){
+        font-size: 120%;
+    }
+
+    @media screen and (max-width: 500px){
+        height: 33px;
+        width: 50%;
+        font-size: 100%;
+    }
 `;
 
 export const CardTechnosIconsContainer = styled.div`
@@ -100,6 +160,22 @@ export const CardTechnosIconsContainer = styled.div`
     align-items: baseline;
     justify-items: center;
     font-size: 200%;
+
+    @media screen and (max-width: 1400px){
+        font-size: 100%;
+    }
+
+    @media screen and (max-width: 1000px){
+        font-size: 300%;
+    }
+
+    @media screen and (max-width: 750px){
+        font-size: 200%;
+    }
+
+    @media screen and (max-width: 500px){
+        font-size: 150%;
+    }
 `;
 
 export const MoreArrowContainer = styled.div`
@@ -118,6 +194,23 @@ export const MoreArrow = styled.p`
 
     :hover{
         transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 1400px){
+        font-size: 50%;
+        line-height: 10px;
+    }
+
+    @media screen and (max-width: 1000px){
+        font-size: 125%;
+    }
+
+    @media screen and (max-width: 750px){
+        font-size: 90%;
+    }
+
+    @media screen and (max-width: 500px){
+        font-size: 75%;
     }
 `;
 
@@ -138,5 +231,12 @@ export const CardPictureContainer = styled.div`
 
     .cardPicture{
         width: 100%;
+    }
+
+    @media screen and (max-width: 1000px){
+        width: 100%;
+        height: 90%;
+        grid-column: 1/5;
+        grid-row: 4/6;
     }
 `;

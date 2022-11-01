@@ -78,13 +78,18 @@ const GlobalStyle = createGlobalStyle`
 
     @media screen and (min-width: 1200px){
       height: 100vh;
+      overflow: hidden;
     }
   }
 
   #root{
     width: 100%;
     height: 100%;
-    overflow: hidden;
+  }
+
+  #containerAll{
+    width: 100%;
+    height: 100%;
   }
 
   .secondaryColor{

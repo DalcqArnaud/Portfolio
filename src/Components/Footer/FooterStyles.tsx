@@ -13,7 +13,7 @@ export const FooterWrapper = styled.div<footerWrapperProps>`
     align-items: end;
     justify-items: ${props => props.justifyType};
     
-    @media screen and (max-width: 380px){
+    @media screen and (max-width: 500px){
         align-items: center;
         justify-items: center;
     }
@@ -40,8 +40,29 @@ export const FooterLeftContent = styled.div`
             color: ${Colors.secondary};
         }
 
+        @media screen and (min-width: 1201px) and (max-width: 1400px){
+            font-size: 100%;
+        }
+
+        @media screen and (min-width: 1000px) and (max-width: 1200px){
+            font-size: 80%;
+        }
+
+        @media screen and (max-width: 1000px){
+            padding-bottom: 60px;
+        }
+
+        @media screen and (max-width: 750px){
+            font-size: 120%;
+        }
+
+        @media screen and (max-width: 500px){
+            font-size: 100%;
+        }
+
         @media screen and (max-width: 380px){
             font-size: 80%;
+            padding-bottom: 20px;
         }
     }
 
@@ -49,7 +70,11 @@ export const FooterLeftContent = styled.div`
         margin-right: 5px;
         font-size: xx-large;
 
-        @media screen and (max-width: 380px){
+        @media screen and (min-width: 1000px) and (max-width: 1400px){
+            font-size: 150%;
+        }
+
+        @media screen and (max-width: 500px){
             font-size: 150%;
         }
     }
@@ -58,7 +83,7 @@ export const FooterLeftContent = styled.div`
         text-decoration: none;
     }
 
-    @media screen and (max-width: 380px){
+    @media screen and (max-width: 500px){
         column-gap: 20px;
     }
 `;
@@ -83,6 +108,15 @@ export const MainArrowsContainer = styled.div`
             background-color: ${Colors.transparent};
             border: 2px solid ${Colors.disabled};
         }
+    }
+
+    @media screen and (max-width: 1000px){
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 500px){
+        grid-template-columns: 1fr 25% 25%;
+        margin-bottom: 20px;
     }
 `;
 
@@ -120,6 +154,9 @@ export const DiamondIconContainer = styled.div`
 
     [class^=iconDiamond]{
         font-size: 250%;
+        @media screen and (min-width: 1000px) and (max-width: 1400px){
+            font-size: 125%;
+        }
     }
 `;
 
@@ -130,4 +167,9 @@ export const DiamondBackground = styled.div`
     height: 50px;
     background-color: ${Colors.secondary};
     transform: rotate(45deg);
+
+    @media screen and (min-width: 1000px) and (max-width: 1400px){
+        width: 25px;
+        height: 25px;
+    }
 `;

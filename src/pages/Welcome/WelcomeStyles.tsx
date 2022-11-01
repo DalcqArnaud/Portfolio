@@ -18,5 +18,12 @@ export const MainContainer = styled.div`
         font-size: 500%;
         font-family: ${Fonts.titles};
         animation: 1.5s infinite ease-in-out ${PulseAnimation};
+
+        @media screen and (max-width: 380px){
+            font-size: 300%;
+        }
+        @media screen and (min-width: 380px) and (max-width: 999px){
+            font-size: 400%;
+        }
     }
 `;

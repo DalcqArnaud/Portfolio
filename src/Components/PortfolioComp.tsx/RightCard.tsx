@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaNodeJs, FaReact } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiCss3, SiHtml5, SiStyledcomponents } from "react-icons/si";
@@ -9,9 +9,28 @@ const RightCard = () => {
     window.open(url, "_blank");
   };
 
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  function getWindowSize() {
+    const {innerWidth, innerHeight} = window;
+    return {innerWidth, innerHeight};
+  }
+
   return (
     <RightCardWrapper>
-      <CardContainer alignType="baseline">
+      <CardContainer alignType={windowSize.innerWidth <= 1400 ? 'center' : 'baseline'}>
         <CardNameContainer>Hangman Game</CardNameContainer>
         <CardDescriptionContainer>
           <p>
@@ -51,7 +70,7 @@ const RightCard = () => {
           </div>
         </CardPictureContainer>
       </CardContainer>
-      <CardContainer alignType="end">
+      <CardContainer alignType={windowSize.innerWidth <= 1400 ? 'center' : 'end'}>
         <CardNameContainer>Random Quotes</CardNameContainer>
         <CardDescriptionContainer>
           <p>

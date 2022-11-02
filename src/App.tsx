@@ -5,11 +5,14 @@ import Welcome from './pages/Welcome/Welcome';
 
 
 function App() {
+
+  const hostname = (window.location.hostname === 'localhost' ? '/' : '/Portfolio/'); 
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Welcome/>}/>
-        <Route path="/Home" element={<HomePage/>}/>
+        <Route path={`${hostname}`} element={<Welcome/>}/>
+        <Route path={`${hostname}Home`} element={<HomePage/>}/>
       </Routes>
     </Router>
   );

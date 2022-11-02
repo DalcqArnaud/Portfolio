@@ -1,5 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { hostname } from '../../Variables/Variables';
 import { MainContainer } from './WelcomeStyles'
 
 const Welcome:FC = () => {
@@ -12,7 +13,7 @@ const Welcome:FC = () => {
 
     const loadPage = () => {
         setTimeout(() => {
-            navigate('/Home');
+            navigate(`${hostname}Home`);
         }, 2000)
     }
 

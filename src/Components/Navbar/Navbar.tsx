@@ -2,6 +2,7 @@ import React, { FC, useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { NavbarContentContainer, NavbarLine, NavbarWrapper } from './NavbarStyles';
 import { Divide, Divide as Hamburger } from 'hamburger-react'
+import { hostname } from '../../Variables/Variables';
 
 interface navBarProps{
   changeCurrentPage?:((currentPageIndex:number) => void | undefined)
@@ -15,7 +16,7 @@ const Navbar:FC<navBarProps> = (props) => {
   let navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/');
+    navigate(`${hostname}`);
   }
 
   const homeClick = () => {

@@ -6,7 +6,7 @@ import Welcome from './pages/Welcome/Welcome';
 
 function App() {
 
-  const hostname = (window.location.hostname === 'localhost' ? '/' : '/Portfolio/'); 
+  const hostname = (window.location.hostname === 'localhost' ? '/' : 'Portfolio/');
 
   return (
     <Router>
